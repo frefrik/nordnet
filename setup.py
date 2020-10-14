@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="nordnet",
-    version="0.2.0",
+    version="0.2.0.1",
     author="NTF Trader",
     author_email="ntftrader@gmail.com",
     description="A wrapper for nordnet.no public apis",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ntftrader/nordnet",
+    url="https://github.com/frefrik/nordnet",
     packages=setuptools.find_packages(),
     install_requires=['requests', 'simplejson', 'pandas'],
     classifiers=[

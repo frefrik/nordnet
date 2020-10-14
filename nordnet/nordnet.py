@@ -829,3 +829,10 @@ class Nordnet:
             return df
 
         return pd.DataFrame()
+
+    @before
+    def get_exchangerate(self, currency_pair) -> (bool, list):
+        now = datetime.datetime.now()
+        buster = now.strftime("%Y%m%d%H%M")
+
+        return self._GET('exchange_rates/{}?buster={}'.format(currency_pair, buster))
